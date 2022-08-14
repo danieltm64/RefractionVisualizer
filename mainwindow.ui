@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>835</width>
+    <height>462</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Refraction Visualizer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/resources/RefractionVisualizer32x32.png</normaloff>:/resources/RefractionVisualizer32x32.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_centralWidget">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_topLeft">
+      <item>
+       <widget class="RefractionView" name="refractionView" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>480</width>
+          <height>360</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_topRight">
+        <item>
+         <widget class="QGroupBox" name="groupBox_medium1">
+          <property name="title">
+           <string>Medium 1 (top)</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_medium1">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_medium1speed">
+             <item>
+              <widget class="QRadioButton" name="radioButton_speed1">
+               <property name="text">
+                <string>Speed of light in medium 1 (m/s):</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_speed1">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>299792458.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_medium1refractiveIndex">
+             <item>
+              <widget class="QRadioButton" name="radioButton_refractiveIndex1">
+               <property name="text">
+                <string>Refractive index of medium 1:</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_refractiveIndex1">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>299792458.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_medium2">
+          <property name="title">
+           <string>Medium 2 (bottom)</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_medium2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_medium2speed">
+             <item>
+              <widget class="QRadioButton" name="radioButton_speed2">
+               <property name="text">
+                <string>Speed of light in medium 2 (m/s):</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_speed2">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>299792458.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_medium2refractiveIndex">
+             <item>
+              <widget class="QRadioButton" name="radioButton_refractiveIndex2">
+               <property name="text">
+                <string>Refractive index of medium 2:</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_refractiveIndex2">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>299792458.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_mediums12">
+          <property name="title">
+           <string>Mediums 1 and 2</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_mediums12">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_incidenceAngle">
+             <item>
+              <widget class="QLabel" name="label_incidenceAngle">
+               <property name="text">
+                <string>Angle of Incidence:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_incidenceAngle">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_incidenceAngle">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>90.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_incidenceAngle">
+               <item>
+                <property name="text">
+                 <string>Degrees</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Radians</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_refractionAngle">
+             <item>
+              <widget class="QLabel" name="label_refractionAngle">
+               <property name="text">
+                <string>Angle of Refraction:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_refractionAngle">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_refractionAngle">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>90.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_refractionAngle">
+               <item>
+                <property name="text">
+                 <string>Degrees</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Radians</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_whatToCalculate">
+          <property name="title">
+           <string>What To Calculate</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_whatToCalculate">
+           <item>
+            <widget class="QComboBox" name="comboBox_whatToCalculate">
+             <item>
+              <property name="text">
+               <string>Refractive index of medium 1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Refractive index of medium 2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Speed of light in medium 1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Speed of light in medium 2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sine of angle of incidence</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sine of angle of refraction</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Angle of incidence</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Angle of refraction</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_whatToCalculate">
+             <item>
+              <widget class="QPushButton" name="pushButton_calculate">
+               <property name="text">
+                <string>Calculate</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_copyResult">
+               <property name="text">
+                <string>Copy Result</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_output">
+      <property name="text">
+       <string>Ready</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>835</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <addaction name="actionEnglishUS"/>
+    <addaction name="actionPortuguesBrasil"/>
+   </widget>
+   <widget class="QMenu" name="menuStyle">
+    <property name="title">
+     <string>Style</string>
+    </property>
+    <addaction name="actionStyleStandard"/>
+    <addaction name="actionStyleFusion"/>
+    <addaction name="actionStyleFusionDarkWithGreen"/>
+    <addaction name="actionStyleFusionDarkWithYellow"/>
+    <addaction name="actionStyleFusionDarkWithBlue"/>
+    <addaction name="actionStyleFusionDarkWithOrange"/>
+   </widget>
+   <widget class="QMenu" name="menuDiagram">
+    <property name="title">
+     <string>Diagram</string>
+    </property>
+    <addaction name="actionDisplayIncidentRay"/>
+    <addaction name="actionDisplayReflectedRay"/>
+    <addaction name="actionDisplayRefractedRay"/>
+    <addaction name="actionDisplayIncidentRayPropagation"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuLanguage"/>
+   <addaction name="menuStyle"/>
+   <addaction name="menuDiagram"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionEnglishUS">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English (US)</string>
+   </property>
+  </action>
+  <action name="actionPortuguesBrasil">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Português (Brasil)</string>
+   </property>
+  </action>
+  <action name="actionStyleStandard">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Standard</string>
+   </property>
+  </action>
+  <action name="actionStyleFusion">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fusion</string>
+   </property>
+  </action>
+  <action name="actionStyleFusionDarkWithGreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fusion (dark with green)</string>
+   </property>
+  </action>
+  <action name="actionStyleFusionDarkWithYellow">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fusion (dark with yellow)</string>
+   </property>
+  </action>
+  <action name="actionStyleFusionDarkWithBlue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fusion (dark with blue)</string>
+   </property>
+  </action>
+  <action name="actionStyleFusionDarkWithOrange">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fusion (dark with orange)</string>
+   </property>
+  </action>
+  <action name="actionDisplayIncidentRay">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Display incident ray</string>
+   </property>
+  </action>
+  <action name="actionDisplayReflectedRay">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Display reflected ray</string>
+   </property>
+  </action>
+  <action name="actionDisplayRefractedRay">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Display refracted ray</string>
+   </property>
+  </action>
+  <action name="actionDisplayIncidentRayPropagation">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Display incident ray propagation</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>RefractionView</class>
+   <extends>QWidget</extends>
+   <header>refractionview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
