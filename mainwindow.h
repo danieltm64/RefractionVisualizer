@@ -52,7 +52,6 @@ private:
     QTranslator m_translator;
     QTranslator m_translatorQt;
     QString m_aboutMessage;
-
     double m_c;
     double m_lastResult;
     QString m_lastError;
